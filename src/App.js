@@ -3,9 +3,14 @@ import './App.css';
 import Toggle from "./Toggle"
 
 function App() {
+  const [toggled, setToggled] = React.useState(false);
+  const handleClick = () => {
+    setToggled((s) => !s);
+  };
+  
   return (
     <div className="App">
-      <Toggle />
+      <Toggle toggled={toggled} onClick={handleClick} />
     </div>
   );
 }
