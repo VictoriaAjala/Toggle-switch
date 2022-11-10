@@ -5,6 +5,11 @@
     margin: auto;
     background-image: linear-gradient(aqua, skyblue);
     position: relative;
+    cursor: pointer;
+}
+
+.toggle.night {
+    background-image: linear-gradient(midnightblue, rebeccapurple);
 }
 
 .notch {
@@ -16,4 +21,40 @@
     top: 5px;
     left: 5px;
     box-shadow: 0 0 5px yellow;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.night > .notch {
+    background: whitesmoke;
+    box-shadow: 0 0 5px whitesmoke;
+    transform: translate(100px, 0);
+}
+
+.shape {
+    position: absolute;
+    background: whitesmoke;
+    border-radius: 50%;
+}
+
+.shape.sm {
+    height: 5px;
+    width: 50px;
+    top: 50%;
+    left: 60%;
+}
+
+.shape.md {
+    height: 10px;
+    width: 75px;
+    top: 25%;
+    left: 25%;
+    z-index: 2;
+}
+
+.shape.lg {
+    height: 15px;
+    width: 100px;
+    bottom: 20px;
+    left: 25%;
 }
